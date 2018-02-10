@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Leopoldo Gonçalves | Home</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="João Maria Janeiro">
+<style>
+body, html{
+  height:BESA;
+  margin:0;
+  font-size:14px;
+  font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight:400;
+  line-height:1.8em;
+  color:#666;
+  letter-spacing: 2px;
+}
+.navbar {
+    position: relative;
+}
+.navbar-nav a{
+  text-decoration: none;
+  color: #000;
+}
+.navbar-fixed-top .brand:hover,
+.navbar-fixed-top .brand:focus {
+  background-color: transparent;
+  color: transparent;
+  text-decoration: none;
+}
+.navbar-fixed-top .navbar-nav:hover,
+.navbar-fixed-top .navbar-nav:focus {
+  background-color: transparent;
+  color: transparent;
+  text-decoration: none;
+}
+.brand {
+    position: absolute;
+    left: 50%;
+    margin-left: -100px !important;  /* 50% of your logo width */
+    display: block;
+    padding-top: 15px;
+}
+.brand p{
+  text-decoration: none;
+  color: #000;
+}
+.pimg1, .pimg2, .pimg3{
+  position:relative;
+  opacity:0.70;
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+}
+
+.pimg1{
+  background-image:url('./img/landing.jpg');
+  min-height:BESA;
+  opacity: 1;
+}
+.navbar-header{
+  background: transparent;
+}
+
+@media screen and (min-width: 960px) {
+.ty{
+  margin-top: -350px;
+}
+.glyphicon{
+  color: #ffffff;
+}
+.btn{
+  margin-top: 40%;
+  margin-left: 50%;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+}
+.btn:hover{
+  margin-left: 50%;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+}
+}
+@media screen and (max-width: 960px) {
+  .glyphicon{
+    color: #ffffff;
+  }
+  .btn{
+    margin-top: 200%;
+    margin-left: 50%;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+  }
+}
+.thumbnail {
+    border: 0 none;
+    background: transparent;
+}
+.caption p{
+  font-size: 11px;
+  letter-spacing: 0px;
+  color: #C9C5C4;
+  margin-top: -10px;
+}
+
+.navbar-default{
+  background-color: #ffffff;
+}
+
+
+.container{
+  width: 40%;
+  margin-top: 40px;
+}
+
+p{
+  text-align: center;
+}
+
+.img_center{
+  display: block;
+margin-left: auto;
+margin-right: auto;
+}
+</style>
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+
+        <div class="navbar-header">
+
+          <button type="button" id="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+
+
+            <span class="sr-only"></span>
+
+            <!-- Draws 3 bars in navbar button when in small mode -->
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <a class="brand" href="index.html"><p>LEOPOLDO GONÇALVES</p></a>
+        </div>
+
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="contactosx.html">CONTACTS<span class="sr-only">(current)</span></a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-left">
+            <li><a href="about.html">ABOUT<span class="sr-only"></span></a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    </div>
+
+
+
+
+  <div class="container">
+    <p></p>
+    <p><b>Informações Pessoais</b></p>
+    <p>Leopoldo Gonçalves</p>
+    <p>08/10/1966</p>
+    <p>(+351) 917 752 525</p>
+    <p>leopoldo.antonio.goncalves@gmail.com</p>
+  </div>
+
+  <footer><center>
+    <a href="https://www.facebook.com/leopoldo.goncalves.5"><img src="./img/fblogo_1.png" width="20" height="20"></a>
+    <a href="https://www.linkedin.com/in/leopoldo-gon%C3%A7alves-874a4319/"><img src="./img/instalogo_1.png" width="20" height="20"></a>
+  </footer></center>
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/touchswipe.min.js"></script>
+     <script>
+$(document).ready(function() {
+
+     //Enable swiping...
+     $(".carousel-inner").swipe( {
+       //Generic swipe handler for all directions
+       swipeLeft:function(event, direction, distance, duration, fingerCount) {
+         $(this).parent().carousel('next');
+       },
+       swipeRight: function() {
+         $(this).parent().carousel('prev');
+       },
+       //Default is 75px, set to 0 for demo so any distance triggers swipe
+       threshold:0
+     });
+   });
+</script>
+</body>
+</html>
