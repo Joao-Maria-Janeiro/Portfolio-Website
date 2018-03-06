@@ -10,6 +10,13 @@
 <meta name="keywords" content="">
 <meta name="author" content="João Maria Janeiro">
 <link rel="stylesheet" href="css/animate.css">
+<link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
+<link rel="manifest" href="./favicons/site.webmanifest">
+<link rel="mask-icon" href="./favicons/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
 <style>
 body, html{
   height:100%;
@@ -61,9 +68,11 @@ body, html{
 }
 
 .pimg1{
-  background-image:url('./img/landing.jpg');
+  background-image:url('./img/landing_1.png');
   min-height:100%;
   opacity: 1;
+ min-height: 100vh;
+ background-attachment:scroll;
 }
 .navbar-header{
   background: transparent;
@@ -111,7 +120,9 @@ body, html{
     margin-bottom: 80px;
   }
 .caption p{
-  margin-top: -100px;
+margin-top: -60px;
+margin-bottom: 50px;
+line-height: 1.6;
 }
 }
 .thumbnail {
@@ -119,12 +130,7 @@ body, html{
     background: transparent;
     padding: 0;
 }
-.caption p{
-  font-size: 11px;
-  letter-spacing: 0px;
-  color: #C9C5C4;
-  margin-top: -10px;
-}
+
 .tr1{
   padding-top: 150px;
 }
@@ -183,6 +189,12 @@ body, html{
 }
 .nineteen{
   margin-top: 32px;
+}
+.caption p{
+  font-size: 11px;
+  letter-spacing: 0px;
+  color: #C9C5C4;
+  margin-top: -10px;
 }
 }
 p { margin:0 }
@@ -354,7 +366,7 @@ p { margin:0 }
 
             <div class="thumbnail nine">
 
-            <a href="100%.html"><img src="./img/9.png"></img></a>
+            <a href="100.html"><img src="./img/9.png"></img></a>
 
           </div>
           <div class="caption"><p>Campanha Institucional Nosso Banco</p></div>
@@ -421,9 +433,11 @@ p { margin:0 }
 
   <div class="thumbnail sixteen">
 
-    <video width="550" height="320" controls>
+    <div class="embed-responsive embed-responsive-16by9">
+    <video controls>
     <source src="./img/Gégé - Hora de Dormir.mp4" type="video/mp4">
   </video>
+</div>
 
 </div>
 <div class="caption"><p>Conselhos do Gégé</p><p>Hora de Dormir</p></div>
@@ -435,9 +449,11 @@ p { margin:0 }
 
     <div class="thumbnail seventeen">
 
-      <video width="550" height="320" controls>
+      <div class="embed-responsive embed-responsive-16by9">
+      <video  controls>
       <source src="./img/Gégé - Atravessa a Estrada.mp4" type="video/mp4">
     </video>
+  </div>
 
   </div>
 <div class="caption"><p>Conselhos do Gégé</p><p>Atrevessa a Estrada</p></div>
@@ -446,9 +462,11 @@ p { margin:0 }
 
   <div class="thumbnail eighteen">
 
-    <video width="550" height="320" controls>
+    <div class="embed-responsive embed-responsive-16by9">
+    <video controls>
     <source src="./img/Gégé - Natal.mp4" type="video/mp4">
   </video>
+</div>
 
 </div>
 <div class="caption"><p>Conselhos do Gégé</p><p>Natal</p></div>
@@ -460,9 +478,11 @@ p { margin:0 }
 
     <div class="thumbnail nineteen">
 
-      <video width="550" height="320" controls>
+      <div class="embed-responsive embed-responsive-16by9">
+      <video controls>
       <source src="./img/Gégé - Ajuda um Amigo.mp4" type="video/mp4">
     </video>
+  </div>
 
   </div>
 <div class="caption"><p>Conselhos do Gégé</p><p>Ajuda um Amigo</p></div>
@@ -474,6 +494,32 @@ p { margin:0 }
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
      <script src="js/bootstrap.min.js"></script>
      <script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+      <script>
      $(function() {
 
        $(window).scroll(function() {
