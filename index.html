@@ -50,7 +50,7 @@ body, html{
 .brand {
     position: absolute;
     left: 50%;
-    margin-left: -100px !important;  /* 50% of your logo width */
+    margin-left: -100px !important;  
     display: block;
     padding-top: 15px;
 }
@@ -69,10 +69,10 @@ body, html{
 
 .pimg1{
   background-image:url('./img/landing_1.png');
-  min-height:100%;
+  height:100%;
   opacity: 1;
- min-height: 100vh;
- background-attachment:scroll;
+  height: 100vh;
+  background-attachment:scroll;
 }
 .navbar-header{
   background: transparent;
@@ -83,7 +83,10 @@ body, html{
   color: #ffffff;
 }
 .btn{
-  margin-top: 40%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  text-align: center;
   margin-left: 48%;
   background-color: Transparent;
   background-repeat:no-repeat;
@@ -107,7 +110,10 @@ body, html{
     color: #ffffff;
   }
   .btn{
-    margin-top: 200%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    text-align: center;
     margin-left: 45%;
     background-color: Transparent;
     background-repeat:no-repeat;
@@ -495,24 +501,21 @@ p { margin:0 }
      <script src="js/bootstrap.min.js"></script>
      <script>
 $(document).ready(function(){
-  // Add smooth scrolling to all links
+
   $("a").on('click', function(event) {
 
-    // Make sure this.hash has a value before overriding default behavior
+    
     if (this.hash !== "") {
       // Prevent default anchor click behavior
       event.preventDefault();
 
-      // Store hash
+      
       var hash = this.hash;
 
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
         scrollTop: $(hash).offset().top
       }, 800, function(){
 
-        // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
       });
     } // End if
@@ -537,22 +540,6 @@ $(document).ready(function(){
 
      });
      </script>
-     <!--
-     <script>
-       $(document).ready(function(){
-         $('a[href^="#"]').on('click',function (e){
-           e.preventDefault();
-           var target = this.hash;
-           var $target = $(target);
 
-           $('html, body').animte({
-             'scrollTop': $target.offset().top
-           }, 1000, 'swing', function(){
-             window.location.hash = target;
-           });
-         });
-       });
-     </script>
--->
 </body>
 </html>
